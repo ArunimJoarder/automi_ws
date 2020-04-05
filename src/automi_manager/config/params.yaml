@@ -6,9 +6,6 @@ comm_config:
   torso_port: '/dev/ttyUSB1'
 
 general:
-  behave_mode: 'init'
-  switch_index: 0
-  
   prf_vel: 0
   prf_acc: 0
   max_vel: 0
@@ -61,6 +58,13 @@ dynamixel_config:
     present_pos:    [36 , 4]
     moving:         [46 , 1]
     moving_vel:     [32 , 2]
+
+switches:
+  startup: true
+  initialised: false
+  autonomous: false
+  behave_mode: 'init'   #default
+  switch_index: 0
 
 modes:  
   init:                           # switch_index = 0    (initial position - fully straight)

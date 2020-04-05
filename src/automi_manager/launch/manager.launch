@@ -1,4 +1,5 @@
 <?xml version ="1.0" encoding="UTF-8"?>
 <launch>
-    <rosparam file=”$(find automi_manager)/config/params.yaml” />
+    <arg name = "sim" value = "false" /> 
+    <rosparam file="$(find automi_manager)/config/params.yaml" />
 </launch>
