@@ -9,8 +9,15 @@ general:
   behave_mode: 'init'
   switch_index: 0
   
-  profile_vel: 0
-  profile_acc: 0
+  prf_vel: 0
+  prf_acc: 0
+  max_vel: 0
+
+  p_gain_pos: 0
+  i_gain_pos: 0
+  d_gain_pos: 0
+
+  moving_vel: 0
 
   biped_dxls: [[1, 2, 0],                 # info about dynamixels in biped
                [1, 2, 0],                     # ith array = [id, protocol, initial_angle]
@@ -40,8 +47,8 @@ dynamixel_config:
     present_pos:    [132, 4]
     prf_vel:        [112, 4]
     prf_acc:        [108, 4]
-    drive_mode:     [10 , 0]
-    moving:         [122, 0]
+    drive_mode:     [10 , 1]
+    moving:         [122, 1]
     max_vel:        [44 , 4]
     p_gain_pos:     [84 , 2]
     i_gain_pos:     [82 , 2]
@@ -52,7 +59,7 @@ dynamixel_config:
     torque_enable:  [24 , 1]                # data_name:  [data_addr, data_size]
     goal_pos:       [30 , 4]
     present_pos:    [36 , 4]
-    moving:         [46 , 0]
+    moving:         [46 , 1]
     moving_vel:     [32 , 2]
 
 modes:  
