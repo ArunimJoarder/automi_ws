@@ -1,0 +1,1 @@
+/home/arunim/automi_ws/devel/.private/automi_manager/share/automi_manager/cmake/automi_managerConfig.cmake

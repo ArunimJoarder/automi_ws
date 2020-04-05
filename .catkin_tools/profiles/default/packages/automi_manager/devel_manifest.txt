@@ -1,0 +1,5 @@
+automi_manager
+/home/arunim/automi_ws/devel/.private/automi_manager/cmake.lock /home/arunim/automi_ws/devel/./cmake.lock
+/home/arunim/automi_ws/devel/.private/automi_manager/lib/pkgconfig/automi_manager.pc /home/arunim/automi_ws/devel/lib/pkgconfig/automi_manager.pc
+/home/arunim/automi_ws/devel/.private/automi_manager/share/automi_manager/cmake/automi_managerConfig.cmake /home/arunim/automi_ws/devel/share/automi_manager/cmake/automi_managerConfig.cmake
+/home/arunim/automi_ws/devel/.private/automi_manager/share/automi_manager/cmake/automi_managerConfig-version.cmake /home/arunim/automi_ws/devel/share/automi_manager/cmake/automi_managerConfig-version.cmake
