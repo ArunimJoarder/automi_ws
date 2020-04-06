@@ -1,0 +1,4 @@
+bool    check
+---
+string  mode
+uint8   mode_index

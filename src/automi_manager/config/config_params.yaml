@@ -1,0 +1,73 @@
+# Author: Arunim Joarder
+
+comm_config:
+  baudrate: 57600
+  biped_port: '/dev/ttyUSB0'
+  torso_port: '/dev/ttyUSB1'
+
+general:
+  prf_vel: 0
+  prf_acc: 0
+  max_vel: 0
+
+  p_gain_pos: 0
+  i_gain_pos: 0
+  d_gain_pos: 0
+
+  moving_vel: 0
+
+  biped_dxls: [{id: 1, protocol: 2, init_angle: 0},                 # info about dynamixels in biped
+               {id: 1, protocol: 2, init_angle: 0},                     # ith array = [id, protocol, initial_angle]
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0},
+               {id: 1, protocol: 2, init_angle: 0}]
+  
+  torso_dxls: [{id: 1, protocol: 1, init_angle: 0},                 # info about dynamixels in biped
+               {id: 1, protocol: 1, init_angle: 0},                     # ith array = [id, protocol, initial_angle]
+               {id: 1, protocol: 1, init_angle: 0},
+               {id: 1, protocol: 1, init_angle: 0},
+               {id: 1, protocol: 1, init_angle: 0},
+               {id: 1, protocol: 1, init_angle: 0},
+               {id: 1, protocol: 1, init_angle: 0}]
+
+dynamixel_config:
+  MX_2:                                 # Control table addresses and lengths for MX series for PROTOCOL 2.0
+    torque_enable:  {addr: 64 , len: 1}                # data_name:  [data_addr, data_size]
+    goal_pos:       {addr: 116, len: 4}
+    present_pos:    {addr: 132, len: 4}
+    prf_vel:        {addr: 112, len: 4}
+    prf_acc:        {addr: 108, len: 4}
+    drive_mode:     {addr: 10 , len: 1}
+    moving:         {addr: 122, len: 1}
+    max_vel:        {addr: 44 , len: 4}
+    p_gain_pos:     {addr: 84 , len: 2}
+    i_gain_pos:     {addr: 82 , len: 2}
+    d_gain_pos:     {addr: 80 , len: 2}
+    hardware_error: {addr: 70 , len: 1}
+
+  AX_1:                                 # Control table addresses and lengths for AX series for PROTOCOL 1.0
+    torque_enable:  {addr: 24 , len: 1}                # data_name:  [data_addr, data_size]
+    goal_pos:       {addr: 30 , len: 4}
+    present_pos:    {addr: 36 , len: 4}
+    moving:         {addr: 46 , len: 1}
+    moving_vel:     {addr: 32 , len: 2}
+
+switches:
+  startup: true
+  initialised: false
+  autonomous: false
+  
+  check: true
+  
+  behave_mode: 'stand'   #default
+  switch_index: 0
+
+status:
+  failed: false
