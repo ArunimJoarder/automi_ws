@@ -1,5 +1,10 @@
 <?xml version ="1.0" encoding="UTF-8"?>
 <launch>
     <arg name = "sim" value = "false" /> 
-    <rosparam file="$(find automi_manager)/config/params.yaml" />
+    <rosparam file="$(find automi_manager)/config/config_params.yaml" />
+    <rosparam file="$(find automi_manager)/config/behaviour_params.yaml" />
+    <node pkg="automi_manager" type="behaviour_controller.py" name="behaviour_controller" output="screen" />
+    <node pkg="automi_manager" type="checkSwitch_Server.py" name="checkSwitch_Server" output="screen" />
+    <node pkg="automi_manager" type="checkDynamixelStatus_Server.py" name="checkDynamixelStatus_Server" output="screen" />
+
 </launch>
